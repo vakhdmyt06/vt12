@@ -1,0 +1,1 @@
+if(audio_is_playing(musplay)) snd_stop(musplay);
