@@ -1,0 +1,1 @@
+if(room==room_beach0) event_start(2);

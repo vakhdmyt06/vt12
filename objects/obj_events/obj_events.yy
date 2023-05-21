@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "group_mechanic",
-    "path": "folders/Objects/group_mechanic.yy",
+    "name": "Objects",
+    "path": "folders/Objects.yy",
   },
 }

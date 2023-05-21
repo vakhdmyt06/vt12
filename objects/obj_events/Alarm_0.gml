@@ -1,6 +1,10 @@
 alarm[0] = 1;
 switch(ID_event){
-	case 1:
+	case 0: //stop event execution
+		obj_player.blockinput = false;
+		alarm[0] = -1;
+		break;
+	case 1: //
 		switch(count_timer){
 			case 0:
 				obj_player.blockinput = true;
@@ -105,5 +109,43 @@ switch(ID_event){
 				break;
 		}
 		break;
+	case 2:
+		if(obj_npc_nekoTest.image_index > 1) obj_npc_nekoTest.image_speed = 0; else obj_npc_nekoTest.image_speed = 1;
+		switch(count_timer){
+			case 0:
+				obj_player.blockinput = true;
+				obj_npc_nekoTest.sprite_index = spr_nekoTest_0;
+				break;
+			case 10:
+				obj_npc_nekoTest.image_index = 0;
+				break;
+			case 100:
+				obj_npc_nekoTest.image_index = 0;
+				break;
+			case 60:
+				obj_npc_nekoTest.image_index = 0;
+				break;
+			case 64:
+				obj_npc_nekoTest.image_index = 0;
+				break;
+			case 70:
+				obj_npc_nekoTest.image_index = 0;
+			case 120:
+				obj_npc_nekoTest.image_index = 0;
+				count_timer = 1;
+		}
+		if(keyboard_check_pressed(vk_enter)){
+			obj_npc_nekoTest.sprite_index = spr_nekoTest_1;
+			ID_event++;
+		}
+		break;
+	case 3:
+		if(obj_npc_nekoTest.y>200)obj_npc_nekoTest.y-= 9;
+		else {
+			obj_player.blockinput = false;
+			obj_npc_nekoTest.y-= 9;
+			obj_npc_nekoTest.x+= 5;
+		}
+		if(obj_npc_nekoTest.y<-60) ID_event = 0;
 }
 count_timer++;

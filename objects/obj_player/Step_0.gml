@@ -24,16 +24,16 @@ if(!blockinput){
 	}
 	switch(facing){
 		case 1:
-			sprite_index = anm_rumuwalkup;
+			sprite_index = anm_playerTest_up
 			break;
 		case 2:
-			sprite_index = anm_rumuwalkdown;
+			sprite_index = anm_playerTest_down;
 			break;
 		case 3:
-			sprite_index = anm_rumuwalkleft;
+			sprite_index = anm_playerTest_left;
 			break;
 		case 4:
-			sprite_index = anm_rumuwalkright;
+			sprite_index = anm_playerTest_right;
 			break;
 	}
 			walkbackup();
